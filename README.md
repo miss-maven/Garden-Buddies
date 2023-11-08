@@ -7,3 +7,4 @@ Whether you're a passionate gardener, a landscaping professional, or simply some
 Because nothing says "nature" like sitting indoors behind a screen!!! 
 
 ![gardenBuddies](https://github.com/miss-maven/Garden-Buddies/assets/107432007/4df249e7-c836-4a07-905c-785360364269)
+![withered-freddy-twerk](https://github.com/miss-maven/Garden-Buddies/assets/107432007/52c96b2e-e325-41d9-bf67-ccab765a3a7f)
