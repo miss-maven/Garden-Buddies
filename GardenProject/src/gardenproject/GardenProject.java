@@ -6,7 +6,7 @@
 package gardenproject;
 
 /**
- *
+ * adding a test comment
  * @author MccarthD3455
  */
 public class GardenProject
