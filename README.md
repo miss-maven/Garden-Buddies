@@ -5,3 +5,4 @@ Using an intuituve and interactive interface, "Garden-Record" allows you to inpu
 
 Whether you're a passionate gardener, a landscaping professional, or simply someone who enjoys the beauty of plants and flowers, "Garden-Record" is the ideal program to help you manage and maintain your garden collection with ease and efficiency. 
 Because nothing says "nature" like sitting indoors behind a screen!!! 
+![gardenBuddies](https://github.com/miss-maven/Garden-Buddies/assets/107432007/4df249e7-c836-4a07-905c-785360364269)
