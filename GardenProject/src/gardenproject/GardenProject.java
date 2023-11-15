@@ -15,10 +15,11 @@ import java.util.StringTokenizer;
 import javax.swing.JOptionPane;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.swing.JFrame; 
 
 
 public class GardenProject {
-
+public static ArrayList<Plant> myGarden = new ArrayList<Plant>();
    // TODO: Define a printArrayList method that prints an ArrayList of plant (or flower) objects  
    public static boolean varification(String input){
        //<editor-fold defaultstate="collapsed" desc="Verification code">
@@ -37,7 +38,7 @@ public class GardenProject {
        return digitVarafied;
    }
    
-   public static void printArrayList(ArrayList<plantarraylistexample.Plant> myGarden) {
+   public static void printArrayList(ArrayList<Plant> myGarden) {
       int i;
       String plantNumber;
       for (i = 0; i < myGarden.size(); ++i) {
@@ -53,7 +54,7 @@ public class GardenProject {
       
       // TODO: Declare an ArrayList called myGarden that can hold object of type plant
          
-      ArrayList<plantarraylistexample.Plant> myGarden = new ArrayList<plantarraylistexample.Plant>();
+      
 
       // TODO: Declare variables - plantName, plantCost, flowerName, flowerCost, colorOfFlowers, isAnnual
       String[] Choices = {"plant","flower"};
@@ -81,7 +82,7 @@ public class GardenProject {
          //       Add to the ArrayList myGarden
          switch (input){
                  case "flower":
-           plantarraylistexample.Flower myFlower = new plantarraylistexample.Flower();
+           Flower myFlower = new Flower();
            plantName = JOptionPane.showInputDialog("Please enter flower name");
            myFlower.setPlantName(plantName);
             varified = false;
@@ -92,6 +93,7 @@ public class GardenProject {
                 if(varified == false){
                     JOptionPane.showMessageDialog(null, "A letter or symbol was entered.");
                 }
+                
             }
         }
             plantCost = Integer.parseInt(input);
@@ -108,7 +110,7 @@ public class GardenProject {
            break;
            
            case ("plant"):
-           plantarraylistexample.Plant myPlant = new plantarraylistexample.Plant();
+           Plant myPlant = new Plant();
            plantName = JOptionPane.showInputDialog("Please enter plant name.");
            myPlant.setPlantName(plantName);
            varified = false;
@@ -136,6 +138,39 @@ public class GardenProject {
       }
       // TODO: Call the method printArrayList to print myGarden
       printArrayList(myGarden);
-      System.out.print(myGarden);  
-   }    
+      System.out.print(myGarden); 
+      print();
+   }
+   public static void print()
+   {
+    JFrame message = new JFrame();
+      try{
+       PrintWriter outputFile = new PrintWriter("myGarden.txt");
+       int e = 0;
+       for(Object obj : myGarden)
+       {
+         e++;
+         outputFile.println("Plant " + e + " Information:");
+         if(obj.getClass() == Plant.class)
+         {
+            Plant newPlant = (Plant) obj; 
+            outputFile.println("    Plant name: " + newPlant.getPlantName());
+            outputFile.println("    Cost: " + newPlant.getPlantCost());
+         }
+         if(obj.getClass() == Flower.class)
+         {
+            Flower newFlower = (Flower) obj; 
+            outputFile.println("    Plant name: " + newFlower.getPlantName());
+            outputFile.println("    Cost: " + newFlower.getPlantCost());
+            outputFile.println("    Annual: " + newFlower.getPlantType());
+            outputFile.println("    Color of flowers: " + newFlower.getColorOfFlowers());
+         }
+       }   
+       outputFile.close();
+       }catch (IOException e)
+       {
+           JOptionPane.showMessageDialog(message, "An Error occured.");
+       
+       }   
+   }
 }
