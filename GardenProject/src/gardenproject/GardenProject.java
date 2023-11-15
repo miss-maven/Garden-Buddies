@@ -32,9 +32,12 @@ public static ArrayList<Plant> myGarden = new ArrayList<Plant>();
            varified = Character.isDigit(checker);
            if(varified == false){
                digitVarafied = false;
-           }
-           
+           }   
        }
+       if (input.equals(""))
+           {
+               digitVarafied = false;
+           }
        return digitVarafied;
    }
    
@@ -64,7 +67,7 @@ public static ArrayList<Plant> myGarden = new ArrayList<Plant>();
       String flowerCostinput;
       String colorOfFlowers;
       boolean varified;
-      int plantCost;
+      int plantCost = 0;
       int flowerCost;
       int isAnnual;
       int end;
@@ -93,14 +96,14 @@ public static ArrayList<Plant> myGarden = new ArrayList<Plant>();
                 if(varified == false){
                     JOptionPane.showMessageDialog(null, "A letter or symbol was entered.");
                 }
-                
-            }
-        }
-            plantCost = Integer.parseInt(input);
+             plantCost = Integer.parseInt(input);
             if(plantCost <= 0){
                 JOptionPane.showMessageDialog(null, "Number cannot be zero or less.");
                 varified = false;
-            } 
+            }    
+            }
+        }
+            
            myFlower.setPlantCost(plantCost);
            isAnnual = JOptionPane.showConfirmDialog(null,"is the flower an annual flower","",JOptionPane.YES_NO_OPTION);
            myFlower.setPlantType(isAnnual);
@@ -121,13 +124,15 @@ public static ArrayList<Plant> myGarden = new ArrayList<Plant>();
                 if(varified == false){
                     JOptionPane.showMessageDialog(null, "A letter or symbol was entered.");
                 }
+
             }
-        }
-            plantCost = Integer.parseInt(input);
+                            plantCost = Integer.parseInt(input);
             if(plantCost <= 0){
                 JOptionPane.showMessageDialog(null, "Number cannot be zero or less.");
                 varified = false;
-            } 
+            }
+        }
+             
            myPlant.setPlantCost(plantCost);
            myGarden.add(myPlant);
          }
