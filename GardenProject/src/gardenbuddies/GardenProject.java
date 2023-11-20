@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gardenproject;
+package gardenbuddies;
 
 /**
  * adding a test comment
@@ -145,6 +145,7 @@ public static ArrayList<Plant> myGarden = new ArrayList<Plant>();
       printArrayList(myGarden);
       System.out.print(myGarden); 
       print();
+      Invoice.printInvoice(myGarden);
    }
    public static void print()
    {

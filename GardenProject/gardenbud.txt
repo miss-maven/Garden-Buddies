@@ -1,0 +1,44 @@
+-----------------------------------------------------
+
+Garden Buddies Invoice
+
+Date: 2023-11-20
+
+-----------------------------------------------------
+
+Plant 1: 
+
+Name: fern
+
+Cost: 5
+
+
+Plant 0: 
+
+Name: rose
+
+Color: red
+
+Cost: 34
+
+Annual: Yes
+
+
+Plant 0: 
+
+Name: lily
+
+Color: white
+
+Cost: 12
+
+Annual: Yes
+
+
+Plant 2: 
+
+Name: shrub
+
+Cost: 31
+
+Thank you for using Garden Buddies!!!

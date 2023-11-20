@@ -1,0 +1,16 @@
+Plant 1 Information:
+    Plant name: fern
+    Cost: 5
+Plant 2 Information:
+    Plant name: rose
+    Cost: 34
+    Annual: Yes
+    Color of flowers: red
+Plant 3 Information:
+    Plant name: lily
+    Cost: 12
+    Annual: Yes
+    Color of flowers: white
+Plant 4 Information:
+    Plant name: shrub
+    Cost: 31
