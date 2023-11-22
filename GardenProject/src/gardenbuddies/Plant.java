@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package gardenbuddies;
 
 import javax.swing.JOptionPane;
@@ -13,7 +14,7 @@ import javax.swing.JOptionPane;
  */
 public class Plant {
    protected String plantName;
-   protected int plantCost;
+   protected float plantCost;
 
    public void setPlantName(String userPlantName) {
       plantName = userPlantName;
@@ -23,11 +24,11 @@ public class Plant {
       return plantName;
    }
 
-   public void setPlantCost(int userPlantCost) {
+   public void setPlantCost(float userPlantCost) {
       plantCost = userPlantCost;
    }
 
-   public int getPlantCost() {
+   public float getPlantCost() {
       return plantCost;
    }
 

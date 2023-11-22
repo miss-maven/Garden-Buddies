@@ -4,11 +4,6 @@
  * and open the template in the editor.
  */
 package gardenbuddies;
-
-/**
- *
- * @author martinh5174
- */
 import java.io.PrintWriter;
 import java.io.IOException;
 import java.time.LocalDate;
@@ -31,13 +26,13 @@ public static void printInvoice(ArrayList<Plant> myGarden)
 try 
 {
 PrintWriter outputFile = new PrintWriter("gardenbud.txt");
-outputFile.println("-----------------------------------------------------");
+outputFile.println("--------------------------------------------------");
 outputFile.println();
-outputFile.println("Garden Buddies Invoice");
+outputFile.println("------------- Garden Buddies Invoice-------------");
 outputFile.println();
-outputFile.println("Date: " + LocalDate.now());
+outputFile.println("------------- Date: " + LocalDate.now()+ "--------------------");
 outputFile.println();
-outputFile.println("-----------------------------------------------------");
+outputFile.println("--------------------------------------------------");
 for(Object obj: myGarden)
 {
     
@@ -56,8 +51,9 @@ for(Object obj: myGarden)
  if(obj.getClass() == Flower.class)
  {
      Flower myFlower = (Flower) obj;
+     f++;
      outputFile.println();
-     outputFile.println("Plant " + f + ": ");
+     outputFile.println("Flower " + f + ": ");
      outputFile.println();
      outputFile.println("Name: " + myFlower.getPlantName());
      outputFile.println();
@@ -70,8 +66,8 @@ for(Object obj: myGarden)
  }
  
 }
-
-outputFile.println("Thank you for using Garden Buddies!!!");
+outputFile.println();
+outputFile.println("------- Thank you for using Garden Buddies! -------");
 outputFile.close();
 //System.out.println("Plant/flower information added to invoice");
 JOptionPane.showMessageDialog(null, "Plant/Flower information added to invoice");
